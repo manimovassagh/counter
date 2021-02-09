@@ -4,27 +4,27 @@ import React, { Component } from 'react';
 class Counter extends Component {
     state = {
         count: 0,
-        tags: ['tag1', 'tag2', 'tag3','tag4','live change']
+        tags: ['tag1', 'tag2', 'tag3', 'tag4', 'sahar']
     };
     styles = {
         fontSize: '15px',
         fontWeight: 'bold'
     }
-renderTags(){
-if (this.state.tags.length===0) return 'We can not find any tags';
-  return  (<ul>{this.state.tags.map(tag => <li key={tag.id}> {tag}</li>)}</ul>)
+    renderTags() {
+        if (this.state.tags.length === 0) return 'We can not find any tags';
+        return (<ul>
+            {this.state.tags.map(tag => <li key={tag}> {tag}</li>)}
+        </ul>)
 
-}
+    }
 
     render() {
 
         return (
             <div className=' mt-2'>
                 <h3>Shopping Basket</h3>
-                {this.state.tags.length===0 && 'Please add an Item in shop Database'}
-
-                <div>{this.renderTags()}</div>
-                
+                <span className={this.getBadgeClasses()}> {this.formatcount()}</span>
+                <button className="btn btn-secondary btn-sm">Adding Item to Shop</button>
             </div>
         );
 
