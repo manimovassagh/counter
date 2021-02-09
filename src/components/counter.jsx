@@ -14,11 +14,17 @@ class Counter extends Component {
 
         return (
             <div>
-                <span>{this.state.address.strasse}</span>
+                <span>{this.state.count}</span>
                 <button className='btn-primary' >Buy more</button>
             </div>
         );
 
+    }
+
+    //methods place
+    formatcount() {
+        const count=this.state.count
+        return count === 0 ? 'Zero' : count;
     }
 }
 
