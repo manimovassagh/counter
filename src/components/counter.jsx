@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 class Counter extends Component {
     state = {
         count: 0,
-        tags: ['tag1', 'tag2', 'tag3','tag4']
+        tags: ['tag1', 'tag2', 'tag3','tag4','live change']
     };
     styles = {
         fontSize: '15px',
@@ -19,11 +19,11 @@ if (this.state.tags.length===0) return 'We can not find any tags';
     render() {
 
         return (
-
             <div className=' mt-2'>
                 <h3>Shopping Basket</h3>
-                <span style={this.styles} className={this.getBadgeClasses()}> {this.formatcount()} </span>
-                <button className='btn btn-secondary btn-sm' >Buy more</button>
+                {this.state.tags.length===0 && 'Please add an Item in shop Database'}
+
+                <div>{this.renderTags()}</div>
                 
             </div>
         );
