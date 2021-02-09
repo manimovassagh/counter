@@ -14,7 +14,7 @@ class Counter extends Component {
 
         return (
             <div>
-                <h1>Shopping Basket</h1>
+                <span>{this.state.address.strasse}</span>
                 <button className='btn-primary' >Buy more</button>
             </div>
         );
