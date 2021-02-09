@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 class Counter extends Component {
     state = {
         count: 0,
-        tags: ['tag1', 'tag2', 'tag3', 'tag4', 'sahar']
+        tags: ['tag1', 'tag2', 'tag3', 'tag4', 'sahar', 'saharjoon']
     };
     styles = {
         fontSize: '15px',
@@ -18,13 +18,22 @@ class Counter extends Component {
 
     }
 
+    handleIncrement() {
+        console.log('Increment Clicked')
+    }
+
     render() {
 
         return (
-            <div className=' mt-2'>
-                <h3>Shopping Basket</h3>
+            <div className=' mt-0'>
+
+                <nav className="navbar navbar-dark bg-dark">
+                    <h3 className="text-light mx-auto">Shopping Basket</h3>
+                </nav>
+
                 <span className={this.getBadgeClasses()}> {this.formatcount()}</span>
-                <button className="btn btn-secondary btn-sm">Adding Item to Shop</button>
+                <button onClick={this.handleIncrement} className="btn btn-secondary btn-sm ">Add Item</button>
+
             </div>
         );
 
