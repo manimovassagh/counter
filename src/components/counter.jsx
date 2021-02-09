@@ -4,21 +4,23 @@ import React, { Component } from 'react';
 class Counter extends Component {
     state = {
         count: 0,
-        tags: ['tag1', 'tag2', 'tag3', 'tag4', 'sahar', 'saharjoon']
+        // tags: ['tag1', 'tag2', 'tag3', 'tag4', 'sahar', 'saharjoon']
     };
-    styles = {
-        fontSize: '15px',
-        fontWeight: 'bold'
-    }
-    renderTags() {
-        if (this.state.tags.length === 0) return 'We can not find any tags';
-        return (<ul>
-            {this.state.tags.map(tag => <li key={tag}> {tag}</li>)}
-        </ul>)
 
-    }
+    //constructor
+    // constructor() {
+    //     super()
+    //     this.handleIncrement = this.handleIncrement.bind(this);
+    // }
 
-    handleIncrement() {
+    // renderTags = () => {
+    //     if (this.state.tags.length === 0) return 'We can not find any tags';
+    //     return (<ul>
+    //         {this.state.tags.map(tag => <li key={tag}> {tag}</li>)}
+    //     </ul>)
+    // }
+
+    handleIncrement = () => {
         console.log('Increment Clicked')
     }
 
